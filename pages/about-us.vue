@@ -371,7 +371,7 @@ export default {
   left: 25px;
   width: 1px;
   height: 200px;
-  border: 1px solid #f3a627;
+  background-color: #f3a627;
   z-index: 1;
 }
 

@@ -252,6 +252,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
+  padding-left: 20px;
   width: 100%;
 }
 

@@ -50,7 +50,7 @@ export default {
 }
 
 .website_letter > div > div {
-  max-width: 250px;
+  max-width: 300px;
   margin: 20px auto 5px auto;
   background: #f5f4ff;
   box-sizing: border-box;
