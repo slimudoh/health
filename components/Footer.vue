@@ -13,8 +13,16 @@
               <nuxt-link to="/"> Home </nuxt-link>
             </div>
             <div><nuxt-link to="/about-us"> About </nuxt-link></div>
-            <div><nuxt-link to="/"> Find Insurance </nuxt-link></div>
-            <div><nuxt-link to="/"> Find Hospitals </nuxt-link></div>
+            <div>
+              <nuxt-link to="/all-available-insurance">
+                Find Insurance
+              </nuxt-link>
+            </div>
+            <div>
+              <nuxt-link to="/all-available-clinics">
+                Find Hospitals
+              </nuxt-link>
+            </div>
           </div>
         </div>
         <div>

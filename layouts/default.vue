@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container_div">
     <Header />
     <nuxt />
   </div>
@@ -17,4 +17,14 @@ export default {
 
 <style>
 @import url('~assets/css/app.css');
+
+.container_div {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .container_div {
+    display: block;
+  }
+}
 </style>

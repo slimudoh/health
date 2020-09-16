@@ -72,10 +72,14 @@
               <nuxt-link to="/">Home</nuxt-link>
             </div>
             <div @click="mobileMenu = !mobileMenu">
-              <nuxt-link to="/">Find Health Insurance</nuxt-link>
+              <nuxt-link to="/all-available-insurance"
+                >Find Health Insurance</nuxt-link
+              >
             </div>
             <div @click="mobileMenu = !mobileMenu">
-              <nuxt-link to="/">Find Available Clinics</nuxt-link>
+              <nuxt-link to="/all-available-clinics"
+                >Find Available Clinics</nuxt-link
+              >
             </div>
             <div @click="mobileMenu = !mobileMenu">
               <nuxt-link to="/about-us">About Us</nuxt-link>
