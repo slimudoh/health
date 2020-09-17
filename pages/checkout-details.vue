@@ -60,7 +60,15 @@
     <Billing v-if="selectedInfo === 'bill'" />
     <Review v-if="selectedInfo === 'review'" />
     <Primary v-if="selectedInfo === 'primary'" />
-    <div class="checkout_div_btn" @click="gotoComplete">Continue</div>
+
+    <div
+      class="checkout_div_btn"
+      @click="gotoComplete"
+      v-if="selectedInfo === 'primary'"
+    >
+      Pay N40,000
+    </div>
+    <div class="checkout_div_btn" @click="gotoComplete" v-else>Continue</div>
   </div>
 </template>
 

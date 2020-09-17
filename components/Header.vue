@@ -4,8 +4,8 @@
       <div class="website_header_logo">
         <img src="@/assets/images/logo.png" alt="logo" />
       </div>
-      <div class="website_header_menu" @click="gotoCart">
-        <div>
+      <div class="website_header_menu">
+        <div @click="gotoCart">
           <div>
             <svg
               width="21"
@@ -24,8 +24,8 @@
           </div>
           <p>cart</p>
         </div>
-        <div>
-          <div @click="mobileMenu = true">
+        <div @click="mobileMenu = true">
+          <div>
             <svg
               width="29"
               height="17"
