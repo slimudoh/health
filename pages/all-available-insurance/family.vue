@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="family">
       <div class="family_banner_back">
         <nuxt-link to="/all-available-insurance">
@@ -41,21 +42,28 @@
           </div>
         </div>
       </div>
-      <Cover />
-      <div class="family_buy">Buy Now</div>
+      <Accordion />
+      <div class="family_buy" @click="buyNow">Buy Now</div>
     </div>
     <Footer />
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Cover from '@/components/Cover'
+import Accordion from '@/components/Cover/Accordion'
 
 export default {
   components: {
     Footer,
-    Cover,
+    Accordion,
+    Header,
+  },
+  methods: {
+    buyNow() {
+      this.$router.push('/checkout')
+    },
   },
 }
 </script>

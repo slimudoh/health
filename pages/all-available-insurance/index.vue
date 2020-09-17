@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="cover_banner">
       <div>
         <h3>Find A Health Insurance</h3>
@@ -56,54 +57,10 @@
       </div>
     </div>
 
-    <div class="cover_list">
-      <div>
-        <div>
-          <div class="cover_list_img">
-            <div>
-              <div>
-                <img src="@/assets/images/family.png" alt="" />
-              </div>
-              <div>
-                <img src="@/assets/images/lagos.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="cover_list_details">
-            <h6>FAMILY COVER</h6>
-            <p>The Lagos State Health Scheme</p>
-            <h3>N40,000</h3>
-            <h5>
-              <nuxt-link to="/all-available-insurance/family"
-                ><span>VIEW DETAILS</span> &#8594;</nuxt-link
-              >
-            </h5>
-          </div>
-        </div>
-        <div>
-          <div class="cover_list_img">
-            <div>
-              <div>
-                <img src="@/assets/images/lady.png" alt="" />
-              </div>
-              <div>
-                <img src="@/assets/images/lagos.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="cover_list_details">
-            <h6>INDIVIDUAL COVER</h6>
-            <p>The Lagos State Health Scheme</p>
-            <h3>N8,500</h3>
-            <h5>
-              <nuxt-link to="/all-available-insurance/individual"
-                ><span>VIEW DETAILS</span> &#8594;</nuxt-link
-              >
-            </h5>
-          </div>
-        </div>
-      </div>
-    </div>
+    <All v-if="selectedTab === 'all'" />
+    <Family v-if="selectedTab === 'family'" />
+    <Individual v-if="selectedTab === 'individual'" />
+
     <div class="cover_connect">
       <div>
         <h3>Why HealthConnect</h3>
@@ -200,11 +157,19 @@
 </template>
 
 <script>
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import All from '@/components/Cover/AllCover'
+import Family from '@/components/Cover/FamilyCover'
+import Individual from '@/components/Cover/IndividualCover'
 
 export default {
   components: {
     Footer,
+    All,
+    Family,
+    Individual,
+    Header,
   },
   data() {
     return {
@@ -274,7 +239,7 @@ export default {
   align-items: center;
   border-bottom: 5px solid transparent;
 }
-
+/*
 .cover_list {
   background: #fff;
 }
@@ -360,7 +325,7 @@ export default {
 .cover_list_details > h5 > a > span {
   text-decoration-line: underline;
   width: 100px;
-}
+} */
 
 .cover_connect {
   background: #122933;

@@ -4,7 +4,7 @@
       <div class="website_header_logo">
         <img src="@/assets/images/logo.png" alt="logo" />
       </div>
-      <div class="website_header_menu">
+      <div class="website_header_menu" @click="gotoCart">
         <div>
           <div>
             <svg
@@ -108,6 +108,11 @@ export default {
     return {
       mobileMenu: false,
     }
+  },
+  methods: {
+    gotoCart() {
+      this.$router.push('/cart')
+    },
   },
 }
 </script>

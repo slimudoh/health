@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="container_banner">
       <div>
         <p>
@@ -174,6 +175,7 @@
 </template>
 
 <script>
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Newsletter from '@/components/Newsletter'
 
@@ -181,6 +183,7 @@ export default {
   components: {
     Footer,
     Newsletter,
+    Header,
   },
 }
 </script>

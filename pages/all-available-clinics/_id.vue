@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="clinics_details">
       <div>
         <h6>
@@ -58,10 +59,12 @@
 </template>
 
 <script>
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default {
   components: {
+    Header,
     Footer,
   },
 }
