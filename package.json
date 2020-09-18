@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "vue-owl-carousel": "^2.0.3"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.11.0",
