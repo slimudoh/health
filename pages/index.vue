@@ -61,7 +61,7 @@
           <client-only>
             <carousel :autoplay="true" :nav="false" :dots="false">
               <div class="home_insurance_partner_img">
-                <div>
+                <div style="padding: 0 20px">
                   <img src="@/assets/images/slider/img_1.png" alt="" />
                 </div>
               </div>
@@ -552,16 +552,13 @@ export default {
 }
 
 .home_insurance_partner_img {
-  padding: 0 5px;
+  padding: 0 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
   height: 100px;
-}
-
-.home_insurance_partner_img > div {
 }
 
 .home_connect {
