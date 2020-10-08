@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .clinics_details {
   background: #fff;
   padding: 30px 0;

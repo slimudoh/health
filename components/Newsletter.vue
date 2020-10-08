@@ -93,11 +93,13 @@ export default {
 }
 
 .website_letter > div > p {
+  max-width: 300px;
+  margin: auto;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 14px;
-  text-align: center;
+  text-align: left;
   color: #122933;
   opacity: 0.4;
 }

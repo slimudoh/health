@@ -24,7 +24,7 @@
               <div class="family_details_table_top">
                 <p>
                   N8,500
-
+                  <br />
                   <span>per year</span>
                 </p>
                 <div>
@@ -32,9 +32,9 @@
                   <p>1 Primary Member</p>
                 </div>
               </div>
-              <div class="family_details_table_btm">
+              <!-- <div class="family_details_table_btm">
                 Additional member can be added at an extra cost.
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .family {
   background: #e5e5e5;
   padding-bottom: 70px;
@@ -97,7 +97,7 @@ export default {
 }
 
 .family_details > div {
-  height: 300px;
+  height: 230px;
 }
 
 .family_details > div > div {
@@ -106,7 +106,7 @@ export default {
   left: 0;
   width: 100%;
   background: #fafefd;
-  border: 2px solid #2a9d8f;
+  /* border: 2px solid #2a9d8f; */
   box-sizing: border-box;
   padding: 20px;
 }
@@ -158,6 +158,7 @@ export default {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 

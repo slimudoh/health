@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import Header from '@/components/HeaderEmpty'
+import Header from '@/components/Header'
 
 export default {
   components: {
@@ -256,7 +256,7 @@ export default {
 }
 
 .complete_div_share_email > div > img {
-  width: 25px;
+  width: 20px;
 }
 
 .complete_div_share_sms {
@@ -293,7 +293,7 @@ export default {
 }
 
 .complete_div_share_sms > div > img {
-  width: 25px;
+  width: 20px;
 }
 
 .complete_div_chat {

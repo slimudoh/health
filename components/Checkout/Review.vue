@@ -70,8 +70,8 @@
           </svg>
         </div>
         <p>
-          By placing your order you agree to the website terms and conditions
-          and our privacy policy.
+          We use 256 bit ssl technology to encrypt your data. Your payment is
+          fully secured.
         </p>
       </div>
     </div>
@@ -94,7 +94,7 @@ export default {
 }
 
 .checkout_bill > div > h3 {
-  max-width: 200px;
+  /* max-width: 200px; */
   margin: auto;
   font-style: normal;
   font-weight: bold;
@@ -170,7 +170,7 @@ export default {
   color: #000000;
   border: 0;
   outline: 0;
-  height: 20px;
+  height: 30px;
   padding-top: 10px;
 }
 
@@ -225,7 +225,7 @@ export default {
   color: #000000;
   border: 0;
   outline: 0;
-  height: 20px;
+  height: 30px;
   padding-top: 10px;
 }
 
@@ -258,7 +258,7 @@ export default {
   color: #000000;
   border: 0;
   outline: 0;
-  height: 20px;
+  height: 30px;
   padding-top: 10px;
 }
 </style>

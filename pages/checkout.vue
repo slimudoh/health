@@ -46,31 +46,35 @@
         </div>
         <div class="checkout_div_details_list_spouse">
           <div>
-            <p>Spouse(s)</p>
-            <div>
+            <div class="checkout_div_details_list_spouse_left">
+              <h6>Spouse(s)</h6>
+              <p>
+                Adding more than <span>1 spouse</span> will cost an additional
+                <span>N8,500</span>.
+              </p>
+            </div>
+            <div class="checkout_div_details_list_spouse_right">
               <div>-</div>
               <p>2</p>
               <div>+</div>
             </div>
           </div>
-          <p>
-            Adding more than <span>1 spouse</span> will cost an additional
-            <span>N8,500</span>.
-          </p>
         </div>
         <div class="checkout_div_details_list_child">
           <div>
-            <p>Children</p>
-            <div>
+            <div class="checkout_div_details_list_child_left">
+              <h6>Children</h6>
+              <p>
+                Adding more than <span>4 children</span> will cost an additional
+                <span>N6,000</span>.
+              </p>
+            </div>
+            <div class="checkout_div_details_list_child_right">
               <div>-</div>
               <p>2</p>
               <div>+</div>
             </div>
           </div>
-          <p>
-            Adding more than <span>4 children</span> will cost an additional
-            <span>N6,000</span>.
-          </p>
         </div>
       </div>
       <div class="checkout_div_details_amount">
@@ -423,8 +427,11 @@ export default {
   min-height: 40px;
 }
 
-.checkout_div_details_list_spouse > div > p {
+.checkout_div_details_list_spouse_left {
   width: calc(100% - 130px);
+}
+
+.checkout_div_details_list_spouse_left > h6 {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -433,7 +440,23 @@ export default {
   opacity: 0.89;
 }
 
-.checkout_div_details_list_spouse > div > div {
+.checkout_div_details_list_spouse_left > p {
+  opacity: 0.8;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  /* or 138% */
+  margin-top: 10px;
+  color: #e49a1e;
+}
+
+.checkout_div_details_list_spouse_left > p > span {
+  font-weight: 900;
+}
+
+.checkout_div_details_list_spouse_right {
   width: 120px;
   padding: 0 5px;
   display: flex;
@@ -443,7 +466,7 @@ export default {
   align-items: center;
 }
 
-.checkout_div_details_list_spouse > div > div > p {
+.checkout_div_details_list_spouse_right > p {
   width: 30px;
   font-style: normal;
   font-weight: bold;
@@ -454,7 +477,7 @@ export default {
   text-align: center;
 }
 
-.checkout_div_details_list_spouse > div > div > div {
+.checkout_div_details_list_spouse_right > div {
   width: 30px;
   height: 30px;
   border-radius: 60px;
@@ -476,18 +499,6 @@ export default {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.checkout_div_details_list_child > p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
-  color: #08374b;
-}
-
-.checkout_div_details_list_child > p > span {
-  font-weight: 600;
-}
-
 .checkout_div_details_list_child > div {
   display: flex;
   flex-flow: row wrap;
@@ -497,8 +508,11 @@ export default {
   min-height: 40px;
 }
 
-.checkout_div_details_list_child > div > p {
+.checkout_div_details_list_child_left {
   width: calc(100% - 130px);
+}
+
+.checkout_div_details_list_child_left > h6 {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -507,7 +521,21 @@ export default {
   opacity: 0.89;
 }
 
-.checkout_div_details_list_child > div > div {
+.checkout_div_details_list_child_left > p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  /* or 138% */
+  margin-top: 10px;
+  color: #08374b;
+}
+
+.checkout_div_details_list_child_left > p > span {
+  font-weight: 900;
+}
+
+.checkout_div_details_list_child_right {
   width: 120px;
   padding: 0 5px;
   display: flex;
@@ -517,7 +545,7 @@ export default {
   align-items: center;
 }
 
-.checkout_div_details_list_child > div > div > p {
+.checkout_div_details_list_child_right > p {
   width: 30px;
   font-style: normal;
   font-weight: bold;
@@ -528,7 +556,7 @@ export default {
   text-align: center;
 }
 
-.checkout_div_details_list_child > div > div > div {
+.checkout_div_details_list_child_right > div {
   width: 30px;
   height: 30px;
   border-radius: 60px;
@@ -542,8 +570,6 @@ export default {
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  /* identical to box height, or 120% */
-
   color: #ffffff;
 }
 </style>

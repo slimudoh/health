@@ -4,15 +4,15 @@
     <div class="cover_banner">
       <div>
         <h3>Find A Health Insurance</h3>
-        <p>That suits your (family's) needs</p>
+        <p>That suits your <br />(family's) needs</p>
       </div>
     </div>
     <div class="cover_nav">
       <div>
         <div
-          @click="selectedTab = 'all'"
+          @click="cover = 'all'"
           :style="
-            selectedTab === 'all'
+            cover === 'all'
               ? {
                   fontWeight: 'bold',
                   color: '#F3A627',
@@ -25,9 +25,9 @@
           All Covers
         </div>
         <div
-          @click="selectedTab = 'individual'"
+          @click="cover = 'individual'"
           :style="
-            selectedTab === 'individual'
+            cover === 'individual'
               ? {
                   fontWeight: 'bold',
                   color: '#F3A627',
@@ -40,9 +40,9 @@
           Individual Covers
         </div>
         <div
-          @click="selectedTab = 'family'"
+          @click="cover = 'family'"
           :style="
-            selectedTab === 'family'
+            cover === 'family'
               ? {
                   fontWeight: 'bold',
                   color: '#F3A627',
@@ -57,9 +57,9 @@
       </div>
     </div>
 
-    <All v-if="selectedTab === 'all'" />
-    <Family v-if="selectedTab === 'family'" />
-    <Individual v-if="selectedTab === 'individual'" />
+    <All v-if="cover === 'all'" />
+    <Family v-if="cover === 'family'" />
+    <Individual v-if="cover === 'individual'" />
 
     <div class="cover_connect">
       <div>
@@ -172,14 +172,22 @@ export default {
     Header,
   },
   data() {
-    return {
-      selectedTab: 'all',
-    }
+    return {}
+  },
+  computed: {
+    cover: {
+      get() {
+        return this.$store.state.insurance.cover
+      },
+      set(value) {
+        this.$store.commit('insurance/UPDATE_COVER', value)
+      },
+    },
   },
 }
 </script>
 
-<style>
+<style scoped>
 .cover_banner {
   background-image: url('~assets/images/banner/cover_1.jpg');
   background-repeat: no-repeat;

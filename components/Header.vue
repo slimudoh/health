@@ -2,7 +2,9 @@
   <div class="website_header">
     <div>
       <div class="website_header_logo">
-        <img src="@/assets/images/logo.png" alt="logo" />
+        <nuxt-link to="/">
+          <img src="@/assets/images/logo.png" alt="logo" />
+        </nuxt-link>
       </div>
       <div class="website_header_menu">
         <div @click="gotoCart">

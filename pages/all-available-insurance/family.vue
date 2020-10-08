@@ -4,7 +4,7 @@
     <div class="family">
       <div class="family_banner_back">
         <nuxt-link to="/all-available-insurance">
-          &#8592; Back to home
+          &#8592; Back to health Insurance
         </nuxt-link>
       </div>
       <div class="family_banner"></div>
@@ -24,14 +24,17 @@
               <div class="family_details_table_top">
                 <p>
                   N40,000
-
+                  <br />
                   <span>per year</span>
                 </p>
                 <div>
                   <h6>Covers for one household of:</h6>
                   <p>
-                    1 Primary Member (Above 18 years)1 Spouse and Up till 4
-                    Children below 18 years
+                    1 Primary Member (Above 18 years)
+                    <br />
+                    1 Spouse and
+                    <br />
+                    Up till 4 Children below 18 years
                   </p>
                 </div>
               </div>
@@ -68,7 +71,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .family {
   background: #e5e5e5;
   padding-bottom: 70px;
@@ -109,7 +112,7 @@ export default {
   left: 0;
   width: 100%;
   background: #fafefd;
-  border: 2px solid #2a9d8f;
+  /* border: 2px solid #2a9d8f; */
   box-sizing: border-box;
   padding: 20px;
 }

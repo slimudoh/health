@@ -141,7 +141,7 @@
     <div class="container_cover">
       <h3>Available Health Covers</h3>
       <div>
-        <div>
+        <div @click="gotoFam">
           <div>
             <div>
               <img src="@/assets/images/family.png" alt="" />
@@ -154,7 +154,7 @@
           <p>The Lagos State Health Scheme</p>
           <h3>N40,000</h3>
         </div>
-        <div>
+        <div @click="gotoInd">
           <div>
             <div>
               <img src="@/assets/images/lady.png" alt="" />
@@ -185,10 +185,30 @@ export default {
     Newsletter,
     Header,
   },
+  methods: {
+    gotoFam() {
+      this.cover = 'family'
+      this.$router.push('/all-available-insurance')
+    },
+    gotoInd() {
+      this.cover = 'individual'
+      this.$router.push('/all-available-insurance')
+    },
+  },
+  computed: {
+    cover: {
+      get() {
+        return this.$store.state.insurance.cover
+      },
+      set(value) {
+        this.$store.commit('insurance/UPDATE_COVER', value)
+      },
+    },
+  },
 }
 </script>
 
-<style>
+<style scoped>
 .container_banner {
   background-image: url('~assets/images/banner/about.jpg');
   background-repeat: no-repeat;

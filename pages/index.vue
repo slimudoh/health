@@ -6,12 +6,19 @@
         <img src="@/assets/images/banner/home.png" alt="" />
 
         <div class="home_banner_text">
-          <h3>Keep your family back home healthy!</h3>
+          <h3>
+            Keep your family <br />
+            back home healthy!
+          </h3>
           <p>
-            Protect them from health emergencies, and give yourself peace of
-            mind.
+            Protect them from health emergencies, <br />
+            and give yourself peace of mind.
           </p>
-          <div>FIND A health INSURAnce</div>
+          <div>
+            <nuxt-link to="/all-available-insurance">
+              <div>FIND A health INSURAnce</div>
+            </nuxt-link>
+          </div>
         </div>
 
         <div class="home_banner_img_one">
@@ -35,7 +42,7 @@
       <div class="home_insurance_list">
         <h3>Available Health Insurances</h3>
         <div>
-          <div>
+          <div @click="gotoFam">
             <div>
               <div><img src="@/assets/images/family.png" alt="" /></div>
               <div><img src="@/assets/images/lagos.png" alt="" /></div>
@@ -44,7 +51,7 @@
             <p>The Lagos State Health Scheme</p>
             <h3>N40,000</h3>
           </div>
-          <div>
+          <div @click="gotoInd">
             <div>
               <div><img src="@/assets/images/lady.png" alt="" /></div>
               <div><img src="@/assets/images/lagos.png" alt="" /></div>
@@ -166,37 +173,47 @@
             if you gift them a health insurance.
           </p>
           <div>
-            <svg
-              width="13"
-              height="15"
-              viewBox="0 0 13 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.335 14.3333C6.335 14.3333 1.00167 11.3333 1.00167 6.46667C0.983873 5.75514 1.10868 5.04726 1.36872 4.38472C1.62877 3.72218 2.0188 3.11839 2.51583 2.60894C3.01286 2.09948 3.60683 1.69467 4.26275 1.41834C4.91866 1.14202 5.62326 0.999778 6.335 1C7.04675 0.999778 7.75134 1.14202 8.40725 1.41834C9.06317 1.69467 9.65714 2.09948 10.1542 2.60894C10.6512 3.11839 11.0412 3.72218 11.3013 4.38472C11.5613 5.04726 11.6861 5.75514 11.6683 6.46667C11.6683 11.3333 6.335 14.3333 6.335 14.3333Z"
-                stroke="black"
-                stroke-linecap="round"
-              />
-              <path
-                d="M6.33496 8.33325C7.43953 8.33325 8.33496 7.43782 8.33496 6.33325C8.33496 5.22868 7.43953 4.33325 6.33496 4.33325C5.23039 4.33325 4.33496 5.22868 4.33496 6.33325C4.33496 7.43782 5.23039 8.33325 6.33496 8.33325Z"
-                stroke="black"
-                stroke-linecap="round"
-              />
-            </svg>
-            Find available clinics
+            <nuxt-link to="/all-available-clinics">
+              <div>
+                <svg
+                  width="13"
+                  height="15"
+                  viewBox="0 0 13 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.335 14.3333C6.335 14.3333 1.00167 11.3333 1.00167 6.46667C0.983873 5.75514 1.10868 5.04726 1.36872 4.38472C1.62877 3.72218 2.0188 3.11839 2.51583 2.60894C3.01286 2.09948 3.60683 1.69467 4.26275 1.41834C4.91866 1.14202 5.62326 0.999778 6.335 1C7.04675 0.999778 7.75134 1.14202 8.40725 1.41834C9.06317 1.69467 9.65714 2.09948 10.1542 2.60894C10.6512 3.11839 11.0412 3.72218 11.3013 4.38472C11.5613 5.04726 11.6861 5.75514 11.6683 6.46667C11.6683 11.3333 6.335 14.3333 6.335 14.3333Z"
+                    stroke="black"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6.33496 8.33325C7.43953 8.33325 8.33496 7.43782 8.33496 6.33325C8.33496 5.22868 7.43953 4.33325 6.33496 4.33325C5.23039 4.33325 4.33496 5.22868 4.33496 6.33325C4.33496 7.43782 5.23039 8.33325 6.33496 8.33325Z"
+                    stroke="black"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Find available clinics
+              </div>
+            </nuxt-link>
           </div>
         </div>
       </div>
     </div>
     <div class="home_power">
-      <h3>Empowering you to look after your loved ones</h3>
-      <p>
-        In just a few simple steps, HealthConnect allows you to directly
-        activate a health cover for your family back home, by digitally
-        connecting to African health insurance schemes.
-      </p>
-      <div>ABOUT HEALTHCONNECT</div>
+      <div>
+        <h3>Empowering you to look after your loved ones</h3>
+        <p>
+          In just a few simple steps, HealthConnect allows you to directly
+          activate a health cover for your family back home, by digitally
+          connecting to African health insurance schemes.
+        </p>
+        <div>
+          <nuxt-link to="/about-us">
+            <div>ABOUT HEALTHCONNECT</div>
+          </nuxt-link>
+        </div>
+      </div>
     </div>
     <div class="home_video">
       <div>
@@ -329,10 +346,30 @@ export default {
     carousel:
       typeof window !== 'undefined' ? () => import('vue-owl-carousel') : '',
   },
+  methods: {
+    gotoFam() {
+      this.cover = 'family'
+      this.$router.push('/all-available-insurance')
+    },
+    gotoInd() {
+      this.cover = 'individual'
+      this.$router.push('/all-available-insurance')
+    },
+  },
+  computed: {
+    cover: {
+      get() {
+        return this.$store.state.insurance.cover
+      },
+      set(value) {
+        this.$store.commit('insurance/UPDATE_COVER', value)
+      },
+    },
+  },
 }
 </script>
 
-<style>
+<style scoped>
 .home_banner > div {
   position: relative;
 }
@@ -345,6 +382,7 @@ export default {
   height: 100%;
   background: transparent;
   padding-top: 100px;
+  z-index: 5;
 }
 
 .home_banner_text > h3 {
@@ -372,9 +410,12 @@ export default {
 .home_banner_text > div {
   background: #f3a627;
   border-radius: 5px;
-  height: 55px;
   width: 200px;
   margin: auto;
+}
+
+.home_banner_text > div > a > div {
+  height: 55px;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -546,7 +587,6 @@ export default {
   font-size: 20px;
   line-height: 27px;
   text-align: center;
-  margin-bottom: 40px;
   color: #08374b;
   margin-top: 30px;
 }
@@ -675,18 +715,20 @@ export default {
 
 .home_clinic > div > div > div {
   width: 217px;
-  height: 56px;
   margin: auto;
   background: #f3a627;
   border-radius: 5px;
+}
+
+.home_clinic > div > div > div > a > div {
+  height: 56px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 13px;
   line-height: 18px;
-
   text-align: center;
   text-transform: uppercase;
-
   color: #122933;
   display: flex;
   flex-flow: row nowrap;
@@ -695,16 +737,23 @@ export default {
   align-items: center;
 }
 
-.home_clinic > div > div > div > svg {
+.home_clinic > div > div > div > a > div > svg {
   width: 10px;
   margin-right: 10px;
 }
+
 .home_power {
   background: #fff;
   padding: 20px 0 50px 0;
 }
 
-.home_power > h3 {
+.home_power > div {
+  width: 90%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.home_power > div > h3 {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -718,7 +767,7 @@ export default {
   margin: auto;
 }
 
-.home_power > p {
+.home_power > div > p {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -732,10 +781,16 @@ export default {
   max-width: 350px;
 }
 
-.home_power > div {
-  width: 193px;
-  height: 55px;
+.home_power > div > div {
+  width: 217px;
   margin: auto;
+  background: #f3a627;
+  border-radius: 5px;
+}
+
+.home_power > div > div > a > div {
+  height: 55px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -745,8 +800,7 @@ export default {
   text-transform: uppercase;
 
   color: #312828;
-  background: #f3a627;
-  border-radius: 5px;
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -845,7 +899,7 @@ export default {
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .home_rate_list > svg {
@@ -860,7 +914,7 @@ export default {
   text-align: center;
   letter-spacing: -0.1px;
   color: #000000;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .home_rate_details {

@@ -2,8 +2,12 @@
   <div>
     <div class="website_footer">
       <div class="website_footer_top">
-        <div><img src="@/assets/images/footer.png" alt="logo" /></div>
-        <p>powered by Pharmaccess Foundation</p>
+        <div>
+          <a href="https://www.pharmaccess.org/" target="_blank" rel="noopener">
+            <img src="@/assets/images/footer.png" alt="logo" />
+          </a>
+        </div>
+        <p>powered by <br />Pharmaccess Foundation</p>
       </div>
       <div class="website_footer_btm">
         <div>

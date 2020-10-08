@@ -71,7 +71,6 @@
           </div>
         </div>
       </div>
-      <p>We will send the order confirmation to this email address.</p>
     </div>
   </div>
 </template>
